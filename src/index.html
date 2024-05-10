@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="../output/tailwind.css">
+    <style>
+      body {
+        background-color: #f7fafc;
+      }
+    </style>
 </head>
-   <body class="h-screen flex items-center justify-center bg-gray-100">
+    <!-- <body class="h-screen flex items-center justify-center bg-gray-100">
       <div class="mx-w-sm mx-auto p-8 bg-white rounded-xl shadow-md space-y-2">
          <img class="h-24 mx-auto rounded-full ring-4 ring-green-400 " src="kmn.png" alt="learn with parba">
          <div class="text-center space-y-2">
@@ -17,8 +22,33 @@
             <button class="px-4 py-1 border border-purple-200 rounded-full text-sm
             text-purple-600 font-semibold">Visit Now</button>
          </div>
-      </div>
-      
+   </body> -->
+      <body class="flex justify-center items-center h-screen">
+         <div class="bg-white p-8 rounded shadow-md">
+           <input type="text" id="result" class="w-full mb-4 p-2 text-right text-xl border border-gray-300 rounded" readonly>
+           <div class="grid grid-cols-4 gap-2">
+             <button class="col-span-3 p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="clearResult()">AC</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="clearLastChar()">←</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('/')">/</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('7')">7</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('8')">8</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('9')">9</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('*')">x</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('4')">4</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('5')">5</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('6')">6</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('-')">-</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('1')">1</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('2')">2</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('3')">3</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('+')">+</button>
+             <button class="col-span-2 p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('0')">0</button>
+             <button class="p-2 bg-gray-200 rounded hover:bg-gray-300" onclick="addToResult('.')">.</button>
+             <button class="p-2 bg-green-500 text-white rounded hover:bg-green-600" onclick="calculate()">=</button>
+           </div>
+         </div>
+
+         <script src="calculator.js"></script>
    </body>
 
 
